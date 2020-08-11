@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-----------------------------------Required_meta_tags------------------------------------->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-----------------------------------/Required_meta_tags------------------------------------->
+
+    <!-------------------------------------Bootstrap_CSS------------------------------------->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-------------------------------------/Bootstrap_CSS------------------------------------->
+
+    <!-------------------------------------Material_Design_Bootstrap------------------------------------->
+    <link href="/static/css/mdb.min.css" rel="stylesheet">
+    <!-------------------------------------/Material_Design_Bootstrap------------------------------------->
+
+    <!-------------------------------------Your_custom_styles(optional)------------------------------------->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-------------------------------------/Your_custom_styles(optional)------------------------------------->
+
+    <title>ALMATELL</title>
+  </head>
+  <body>
+    <!------------------------------------------------Navbar-------------------------------------------------->
+    <div >
+      <nav class="navbar navbar-expand-lg navbar-dark  fixed-top #b2ebf2 cyan lighten-4">
+        <div class="container ">
+          <a class="navbar-brand" href="/">
+            <img src="/static/images/logo.png" width="40%" height="10%" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link text-muted" href="/">ACCUEIL
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link  text-muted" href="/about">QUI SOMMES NOUS</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link text-muted" href="/nos_tarifs">NOS TARIFS</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link text-muted" href="/contact">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div> 
+    <!------------------------------------------------/Navbar-------------------------------------------------->
+      <div class="view">
+        <img src="/static/images/CONTACT.jpg" class="img-fluid contact" alt="">
+        <div class="mask rgba-black-strong flex-center " >
+          <p class="white-text  h1 my-4" style="font-weight:bold ; font-size: 70px">Contact</p>
+        </div>
+      </div>
+    
+    
+    <main><br><br><br>
+      <section class="mb-4 " style="width: 79%; margin-left: 20%;">
+
+        <!------------------------------------------------Section_heading-------------------------------------------------->
+        <h2 class="h1-responsive font-weight-bold text-center my-4" style="margin-left: -20%;">Formulaire de contact</h2>
+
+        <!------------------------------------------------Section_description-------------------------------------------------->
+        <div class="row">
+          <!------------------------------------------------Section_heading-------------------------------------------------->
+          <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="contact" method="POST" enctype="multipart/form-data">
+              <!------------------------------------------------Grid_row-------------------------------------------------->
+              <div class="row">
+                <!------------------------------------------------Grid_column-------------------------------------------------->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <label for="name" class="">Nom et Prénom:</label><br>
+                    <input type="text" id="nom" name="nom" class="form-control">
+                  </div>
+                </div>
+                <!------------------------------------------------/Grid_column-------------------------------------------------->
+
+
+                <!------------------------------------------------Grid_column-------------------------------------------------->
+                <div class="col-md-6">
+                  <div class="md-form mb-0">
+                    <label for="email" class="">Email:</label><br>
+                    <input type="email" id="email" name="email" class="form-control">
+                  </div>
+                </div>
+
+                <!------------------------------------------------/Grid_column-------------------------------------------------->
+              </div>
+
+              <!------------------------------------------------Grid_column-------------------------------------------------->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="md-form mb-0">
+                    <label for="num" class="">Numéro:</label><br>
+                    <input type="text" id="num" name="num" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <!------------------------------------------------/Grid_column-------------------------------------------------->
+              
+              <!------------------------------------------------Grid_row-------------------------------------------------->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="md-form mb-0">
+                    <label for="subject" class="">Sujet:</label><br><br>
+                    <select class="browser-default custom-select" id="sujet" name="sujet">
+                      <option selected value="Isolation Charpente">Isolation Charpente</option>
+                      <option value="Bilan énergétique">Bilan énergétique</option>
+                      <option value="Mutuelle">Mutuelle</option>
+                      <option value="Autre">Autre</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!------------------------------------------------/Grid_row-------------------------------------------------->
+
+              <!------------------------------------------------Grid_row-------------------------------------------------->
+              <div class="row">
+                <!------------------------------------------------Grid_column-------------------------------------------------->
+                <div class="col-md-12">
+
+                  <div class="md-form">
+                    <label for="message">Message:</label><br><br>
+                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                  </div>
+
+                </div>
+                <!------------------------------------------------/Grid_column-------------------------------------------------->
+              </div>
+
+              <!------------------------------------------------/Grid_row-------------------------------------------------->
+              <input class="btn btn-primary " type="submit" value="Envoyer">
+            </form>
+            <div class="status"></div>
+          </div>
+        </div>
+        <!------------------------------------------------/Section_description-------------------------------------------------->
+      </section><br>
+    </main>
+
+    <!------------------------------------------------Google_Maps-------------------------------------------------->
+    <div id="map-container-google-2" class="z-depth-1-half map-container " style="height: 450px;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3396.8814407352343!2d-8.004906785001017!3d31.63709638133124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee628253123f%3A0x151c831b2d50f5a2!2sMarrakech%2040000!5e0!3m2!1sfr!2sma!4v1601809218074!5m2!1sfr!2sma" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <!------------------------------------------------/Google_Maps-------------------------------------------------->
+    <!-------------------------------------------------Footer--------------------------------------------------------->
+    <footer class="page-footer font-small elegant-color-dark pt-4">
+
+      <!--------------------------------------------------Footer_Links------------------------------------------------>
+      <div class="container-fluid text-center text-md-left">
+
+        <!--------------------------------------------------Grid_row-------------------------------------------------->
+        <div class="row">
+
+          <!--------------------------------------------------Grid_column---------------------------------------------->
+          <div class="col-md-6 mt-md-0 mt-3">
+            <img src="/static/images/logo.png" alt="ALMATELL" width="300px" height="100px">
+            <h6 class="text-uppercase text-muted">PRISE DE RENDEZ-VOUS QUALIFIÉS</h6>
+          </div>
+          <!-------------------------------------------------/Grid_column---------------------------------------------->
+
+          <hr class="clearfix w-100 d-md-none pb-3">
+
+          <!--------------------------------------------------Grid_column---------------------------------------------->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <h4 class="text-uppercase text-light Bold text">Contact</h4>
+            <hr class="stylish-color-dark" width="75px" style="float: left;">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!"><i class="fas fa-map-marker-alt"><br><br>Boulevard Prince Moulay Abdellah, Marrakech 40000</i></a>
+              </li><br>
+
+              <li>
+                <a href="#!"><i class="fas fa-phone">  <br><br>+212 696 628 710<br>+212 524 244 192</i></a>
+              </li><br>
+
+              <li>
+                <a href="#!"><i class="fas fa-envelope"><br><br>info@almatell.ma</i></a>
+              </li>
+            </ul>
+          </div>
+          <!--------------------------------------------------/Grid_column---------------------------------------------->
+
+          <!--------------------------------------------------Grid_column---------------------------------------------->
+          <div class="col-md-3 mb-md-0 mb-3">
+            
+            <h4 class="text-uppercase text-light Bold text">Suivez-nous</h4>
+            <br><br>
+            <ul class="list-unstyled d-flex justify-content-around">
+              <li>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i></a>
+              </li>
+              <br>
+              <li>
+                <a href="https://twitter.com/"><i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i></a>
+              </li>
+              <br>
+              <li>
+                <a href="https://fr.linkedin.com/"><i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i></a>
+              </li>
+              <br>
+              <li>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i></a>
+              </li>
+            </ul>
+
+          </div>
+          <!--------------------------------------------------/Grid_column---------------------------------------------->
+
+        </div>
+        <!--------------------------------------------------Grid_row-------------------------------------------------->
+
+      </div>
+      <!--------------------------------------------------/Footer_Links------------------------------------------------>
+      <hr class="stylish-color-dark mx-auto" width="1000px">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3 elegant-color-dark">© 2020 Copyright:
+        <a href="/">ALMATELL </a>   by:Walid DAMOU
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-------------------------------------------------Footer--------------------------------------------------------->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/js/jquery-3.5.1.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+  
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-----------------------------------Required_meta_tags------------------------------------->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-----------------------------------/Required_meta_tags------------------------------------->
+
+    <!-------------------------------------Bootstrap_CSS------------------------------------->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-------------------------------------/Bootstrap_CSS------------------------------------->
+
+    <!-------------------------------------Material_Design_Bootstrap------------------------------------->
+    <link href="/static/css/mdb.min.css" rel="stylesheet">
+    <!-------------------------------------/Material_Design_Bootstrap------------------------------------->
+
+    <!-------------------------------------Your_custom_styles(optional)------------------------------------->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-------------------------------------/Your_custom_styles(optional)------------------------------------->
+
+    <title>ALMATELL</title>
+  </head>
+  <body class="peach-gradient">
+    <div >
+        <!------------------------------------------------Navbar-------------------------------------------------->
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark  fixed-top peach-gradient">
+                <div class="container ">
+                    <a class="navbar-brand" href="/">
+                        <img src="/static/images/logo.png" width="40%" height="10%" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item ">
+                                <a class="nav-link text-muted" href="/" >ACCUEIL
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link text-muted" href="/admin" >SIGN OUT
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div> 
+        <!------------------------------------------------/Navbar-------------------------------------------------->
+    </div> 
+
+    <!------------------------------------------------MSG-------------------------------------------------->
+    <main class="messages">
+        {% for i in range(messages|length)  %}
+            <div class='msg peach-gradient'>
+                <p><i class="fas fa-user-alt"></i>&nbsp; &nbsp;&nbsp;&nbsp;<b class="font-weight-bold">Nom et Prénom : </b>{{user[i].nom}}</p>
+                <p><i class="fas fa-envelope"></i>&nbsp; &nbsp;&nbsp;&nbsp;<b class="font-weight-bold">Email : </b>{{user[i].email}}</p>
+                <p><i class="fas fa-phone"></i>&nbsp; &nbsp;&nbsp;&nbsp;<b class="font-weight-bold">Numéro : </b>{{user[i].num}}</p>
+                <p><i class="fab fa-medapps" style="font-size: 23px;"></i>&nbsp; &nbsp;&nbsp;&nbsp;<b class="font-weight-bold">Sujet : </b>{{messages[i].sujet}}</p>
+                <p><i class="fas fa-comment-dots"></i>&nbsp; &nbsp;&nbsp;&nbsp;<b class="font-weight-bold">Message : </b>{{messages[i].message}}</p><br>
+                <div style="float: right; margin-top: 60px;"><p><i class="fas fa-calendar-alt"></i>&nbsp; &nbsp;&nbsp;&nbsp;<b class="font-weight-bold">Date : </b>{{messages[i].mdate}}</p></div>
+                <form action="/delete/{{ messages[i].id }}">
+                    <input  class="btn  danger-color-dark text-green font-weight-bold" type="submit" value="Supprimer" >
+                </form>
+            </div>
+        {% endfor %}
+        
+    </main>
+    <!------------------------------------------------/MSG-------------------------------------------------->  
+    
+    <!------------------------------------------------Optional JavaScript--------------------------------------------->
+    <!------------------------------------jQuery_first,then_Popper.js,then_Bootstrap JS------------------------------->
+    <script src="/static/js/script.js"></script>
+    <script src="/static/js/jquery-3.5.1.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
