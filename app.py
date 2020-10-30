@@ -87,7 +87,7 @@ def ver():
         if (u==w.login and p==w.password):
             return redirect('/msg')
         else:
-            flash("The password OR username that you've entered is incorrect.")
+            flash("Mot de passe OU le nom d'utilisateur incorrect")
             return render_template("admin.html")
 
 @app.route("/msg")
