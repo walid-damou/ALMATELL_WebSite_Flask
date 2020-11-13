@@ -1,92 +1,96 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <!-----------------------------------Required_meta_tags------------------------------------->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-----------------------------------/Required_meta_tags------------------------------------->
 
-    <!-- Bootstrap CSS -->
+    <!-------------------------------------Bootstrap_CSS------------------------------------->
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-------------------------------------/Bootstrap_CSS------------------------------------->
 
-    <!-- Material Design Bootstrap -->
+    <!-------------------------------------Material_Design_Bootstrap------------------------------------->
     <link href="/static/css/mdb.min.css" rel="stylesheet">
+    <!-------------------------------------/Material_Design_Bootstrap------------------------------------->
 
-    <!-- Your custom styles (optional) -->
+    <!-------------------------------------Your_custom_styles(optional)------------------------------------->
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-------------------------------------/Your_custom_styles(optional)------------------------------------->
 
     <title>ALMATELL</title>
   </head>
   <body>
     <header >
-        <ul class="nav #26a69a teal lighten-1 py-4 " style="padding-left: 150px;">
-            <li class="nav-item" >
-              <a class="nav-link active text-white" style="padding-top: 20px;" href="/">ACCUEIL</a>
-            </li>
-          </ul>
+      <ul class="nav #26a69a teal lighten-1 py-4 " style="padding-left: 150px;">
+        <li class="nav-item" >
+          <a class="nav-link active text-white" style="padding-top: 20px;" href="/">ACCUEIL</a>
+        </li>
+      </ul>
 
-        <div style="background-image: url(/static/images/pexels.jpeg); width:100% ; height:86%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="view ">
-            <br>
-            <div class="container" style="min-height:100% width:80%">
-              {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                  {% for message in messages %}
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                      <span>{{message}}</span>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                  {% endfor %}
-                {% endif %}
-              {% endwith %}
-            </div>
-
-            <form  action="veref" method="POST" enctype="multipart/form-data">
-                <!-- Modal -->
-                <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                <!--Content-->
-                <div class="modal-content form-elegant">
-                    <!--Header-->
-                    <div class="modal-header text-center">
-                    <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <!--Body-->
-
-                    <div class="modal-body mx-4">
-                    <!--Body-->
-                    <div class="md-form mb-5">
-                        <label data-error="wrong" data-success="right" for="Form-email1" >Username</label><br><br>
-                        <input type="text" name="user" class="form-control validate">
-                    </div>
-
-                    <div class="md-form pb-3">
-                        <label data-error="wrong" data-success="right" for="Form-pass1">Password</label><br><br>
-                        <input type="password" id="Form-pass1" name="password" class="form-control validate">
-                    
-                    </div>
-
-                    <div class="text-center mb-3">
-                        <a href="/veref"><input class="btn blue-gradient btn-block btn-rounded z-depth-1a" type="submit" value="Sign in"></a>
-                    </div>
-                    
-
-                    </div>
-                
+      <div style="background-image: url(/static/images/pexels.jpeg); width:100% ; height:86%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;" class="view "><br>
+        <div class="container" style="min-height:100% width:80%">
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <span>{{message}}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
-                <!--/.Content-->
-                </div>
-                </div>
-                <!-- Modal -->
-
-                <div class="text-center " style="padding: 8%;" >
-                <a href="" class="btn btn-default btn-rounded font-weight-bold" data-toggle="modal" data-target="#elegantModalForm" style="height: 50px; width: 370px;">Gestion des Messages</a>
-                </div>
-            </form>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
         </div>
+
+        <form  action="veref" method="POST" enctype="multipart/form-data">
+          <!---------------------------------------------------Modal--------------------------------------------------------------->
+          <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <!---------------------------------------------------Content--------------------------------------------------------------->
+              <div class="modal-content form-elegant">
+                <!---------------------------------------------------Header--------------------------------------------------------------->
+                <div class="modal-header text-center">
+                  <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <!---------------------------------------------------/Header--------------------------------------------------------------->
+
+                <!---------------------------------------------------Body--------------------------------------------------------------->
+
+                <div class="modal-body mx-4">
+                  <!--Body-->
+                  <div class="md-form mb-5">
+                    <label data-error="wrong" data-success="right" for="Form-email1" >Username</label><br><br>
+                    <input type="text" name="user" class="form-control validate">
+                  </div>
+
+                  <div class="md-form pb-3">
+                    <label data-error="wrong" data-success="right" for="Form-pass1">Password</label><br><br>
+                    <input type="password" id="Form-pass1" name="password" class="form-control validate">
+                  
+                  </div>
+
+                  <div class="text-center mb-3">
+                    <a href="/veref"><input class="btn blue-gradient btn-block btn-rounded z-depth-1a" type="submit" value="Sign in"></a>
+                  </div>
+                  
+                </div>
+                
+                <!---------------------------------------------------/Body--------------------------------------------------------------->
+              </div>
+              <!---------------------------------------------------/Content--------------------------------------------------------------->
+            </div>
+          </div>
+          <!---------------------------------------------------/Modal--------------------------------------------------------------->
+
+          <div class="text-center " style="padding: 8%;" >
+            <a href="" class="btn btn-default btn-rounded font-weight-bold" data-toggle="modal" data-target="#elegantModalForm" style="height: 50px; width: 370px;">Gestion des Messages</a>
+          </div>
+        </form>
+      </div>
     </header> 
     <main>
       
